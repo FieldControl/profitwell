@@ -1,0 +1,30 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "plugins": ["sonarjs"],
+    "extends": [
+        "standard",
+        "plugin:sonarjs/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "overrides": [{
+        "files": ["*.spec.js"],
+        "rules": {
+            "no-unused-expressions": "off",
+            "no-undef": "off",
+            "sonarjs/no-duplicate-string": "off"
+        }
+    }],
+    "rules": {
+        "indent": ["error", 2]
+    }
+}
