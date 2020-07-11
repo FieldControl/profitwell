@@ -9,12 +9,16 @@
   <p>
 
 ![Field Control ♥](https://img.shields.io/badge/Field%20Control-%20%20%20%20%20%20♥-blue.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fa6a467c268e3ab8f170/maintainability)](https://codeclimate.com/github/FieldControl/profitwell/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fa6a467c268e3ab8f170/test_coverage)](https://codeclimate.com/github/FieldControl/profitwell/test_coverage)
+![Continuous Integration](https://github.com/FieldControl/profitwell/workflows/Continuous%20Integration/badge.svg)
+
 
   </p>
   <small>
     Built with ❤ by 
       <a href="https://github.com/FieldControl">FieldControl</a> and
-      <a href="https://github.com/FieldControl/contaazul/graphs/contributors">contributors</a> - <a href="https://fieldcontrol.com.br/vaga-para-desenvolvedor.html?utm_source=github&utm_medium=opensource&utm_campaign=contaazul">We are hiring</a>
+      <a href="https://github.com/FieldControl/profitwell/graphs/contributors">contributors</a> - <a href="https://fieldcontrol.com.br/vaga-para-desenvolvedor.html?utm_source=github&utm_medium=opensource&utm_campaign=contaazul">We are hiring</a>
   </small>
 </div>
 
@@ -114,7 +118,8 @@ const response = await profitWell.users.getSubscriptions('field')
 
 ```js
 // Update a user's email address
-// This can actually be any sort of text, not necessarily an email address. Some prefer to store a name here instead 
+// This can actually be any sort of text, not necessarily an email address. 
+// Some prefer to store a name here instead 
 const response = await profitWell.users.update('luiz', { email: 'luiz@fieldcontrol.io' })
 ```
 
