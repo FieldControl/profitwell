@@ -1,6 +1,6 @@
 {
   "name": "profitwell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial Node.js bindings to the ProfitWell API - https://profitwellapiv2.docs.apiary.io/",
   "main": "src/index.js",
   "directories": {

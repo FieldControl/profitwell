@@ -4,19 +4,19 @@ class Plans {
   }
 
   list () {
-    return this.client.get('plans')
+    return this.client.get('plans/')
   }
 
   get (id) {
-    return this.client.get(`plans/${id}`)
+    return this.client.get(`plans/${id}/`)
   }
 
   create ({ id, name }) {
-    return this.client.post('plans', { id, name })
+    return this.client.post('plans/', { id, name })
   }
 
   update (id, { name }) {
-    return this.client.put(`plans/${id}`, { name })
+    return this.client.put(`plans/${id}/`, { name })
   }
 }
 

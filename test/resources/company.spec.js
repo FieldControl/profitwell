@@ -7,7 +7,7 @@ const profitWell = new ProfitWell({
 
 describe('Company', () => {
   it('should get company\'s settings', async () => {
-    nock('https://api.profitwell.com/v2').get('/company/settings').reply(200, {})
+    nock('https://api.profitwell.com/v2').get('/company/settings/').reply(200, {})
     const response = await profitWell.company.getSettings()
     expect(response.status).toBe(200)
   })

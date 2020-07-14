@@ -8,7 +8,7 @@ const profitWell = new ProfitWell({
 
 describe('Subscriptions', () => {
   it('should create new subscription', async () => {
-    nock('https://api.profitwell.com/v2').post('/subscriptions', {
+    nock('https://api.profitwell.com/v2').post('/subscriptions/', {
       user_id: '7927fc01',
       user_alias: 'luiz\'s alias',
       subscription_alias: 'subscription\'s alias',
@@ -37,7 +37,7 @@ describe('Subscriptions', () => {
   })
 
   it('should create update existing subscription (downgrade or update)', async () => {
-    nock('https://api.profitwell.com/v2').put('/subscriptions/7927fc01', {
+    nock('https://api.profitwell.com/v2').put('/subscriptions/7927fc01/', {
       plan_id: 'standard_plan',
       plan_interval: 'year',
       status: 'trialing',
@@ -57,7 +57,7 @@ describe('Subscriptions', () => {
 
   it('should churn given subscription', async () => {
     nock('https://api.profitwell.com/v2')
-      .delete('/subscriptions/7927fc01?effective_date=1522432854&churn_type=delinquent')
+      .delete('/subscriptions/7927fc01/?effective_date=1522432854&churn_type=delinquent')
       .reply(204, {})
 
     const response = await profitWell.subscriptions.churn('7927fc01', {
@@ -68,7 +68,7 @@ describe('Subscriptions', () => {
   })
 
   it('should unchurn given subscription', async () => {
-    nock('https://api.profitwell.com/v2').put('/unchurn/7927fc01').reply(204, {})
+    nock('https://api.profitwell.com/v2').put('/unchurn/7927fc01/').reply(204, {})
     const response = await profitWell.subscriptions.unchurn('7927fc01')
     expect(response.status).toBe(204)
   })

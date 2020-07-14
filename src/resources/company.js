@@ -4,7 +4,7 @@ class Company {
   }
 
   getSettings () {
-    return this.client.get('company/settings')
+    return this.client.get('company/settings/')
   }
 }
 
