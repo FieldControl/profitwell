@@ -42,7 +42,7 @@ npm install profitwell --save
 ```js
 const ProfitWell = require('profitwell')
 const profitWell = new ProfitWell({
-  apiToken: 'Wx15BlcpDfVPWbsTdNX<3'
+  apiToken: ''
 })
 ```
 

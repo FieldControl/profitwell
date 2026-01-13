@@ -3,7 +3,7 @@ const nock = require('nock')
 const ProfitWell = require('../../src/index')
 const { subscriptionStatus, planInterval, planCurrency, churnType } = require('./../../src/core')
 const profitWell = new ProfitWell({
-  apiToken: 'Field<3ProfitWell'
+  apiToken: ''
 })
 
 describe('Subscriptions', () => {
